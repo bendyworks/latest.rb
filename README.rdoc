@@ -1,0 +1,38 @@
+= latest.rb
+
+<tt>latest.rb</tt> provides rails templates with a dynamic way to
+install the latest version of your favorite software.
+Instead of having a template that goes out-of-date as soon
+as a url expires, you can specify that you want the latest
+version of a package. Of course, gems and plugins generally
+handle this just fine, but sometimes a version number is needed.
+One example is jQuery.
+
+== Using
+
+Dead simple. Just load <tt>latest.rb</tt> as a template in your
+template. bendyworks provides a copy for short url purposes:
+
+  load_template 'http://bendyworks.com/latest.rb'
+
+Now use the <tt>latest</tt> method.
+
+  load_template 'http://bendyworks.com/latest.rb'
+  latest :jquery
+  # latest :jquery, :min       # (default)
+  # latest :jquery, :release
+  # latest :jquery, :standard
+
+== Develop your own latest function
+
+There are three things you must provide:
+
+- SOFTWARE_LIST:  lambda function that installs the software
+- REQUIRES:       array of required libraries
+- DEFAULTS:       array of default options
+
+== Authors
+
+<tt>latest.rb</tt> is written by Bradley Grzesiak of bendyworks llc.
+
+<tt>latest.rb</tt> is licensed under the MIT License.
