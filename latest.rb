@@ -1,3 +1,10 @@
+# latest.rb is licensed under the MIT License. 
+#
+# latest.rb is written by Bradley Grzesiak of bendyworks LLC.
+#
+# at the top of your rails template, do:
+#   load_template('http://bendyworks.com/latest.rb')
+
 SOFTWARE_LIST = {
   :jquery => lambda do |args|
     pattern = 
